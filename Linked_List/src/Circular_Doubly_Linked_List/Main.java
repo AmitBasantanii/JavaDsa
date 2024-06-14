@@ -25,6 +25,6 @@ public class Main {
         circularDoublyLinkedList.traverseCDLL(); // 1 -> 3 -> 4
 
         circularDoublyLinkedList.deleteCDLL(); // The CDLL has been deleted
-        circularDoublyLinkedList.traverseCDLL(); // The CDLL does not exists
+        circularDoublyLinkedList.traverseCDLL(); // The CDLL does not exist
     }
 }

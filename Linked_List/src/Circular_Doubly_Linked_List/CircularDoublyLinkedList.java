@@ -81,4 +81,107 @@ public class CircularDoublyLinkedList {
     }
 
     // Reverse Traversal
+    public void reverseTraversalCDLL() {
+        if (head != null) {
+            DoublyNode tempNode = tail;
+            // in reverse loop - tail to head
+            for(int i =0; i<size; i++) {
+                System.out.print(tempNode.value);
+                if(i != size-1) {
+                    System.out.print("<-");
+                }
+                tempNode = tempNode.previous;
+            }
+        }
+        else {
+            System.out.println("The CDLL does not exists !! ");
+        }
+    }
+
+    // Search for a Node
+    public boolean searchNodeCDLL(int nodeValue) {
+        if (head != null) {
+            DoublyNode tempNode = head;
+            for(int i=0; i<size; i++) {
+                if(tempNode.value == nodeValue) {
+                    System.out.println("The node is found at location : " + i);
+                    return true;
+                }
+                tempNode = tempNode.next;
+            }
+        }
+        System.out.println("Node not found !! ");
+        return false;
+    }
+
+    // Deletion Method
+    public void deleteNode(int location) {
+        if(head == null) {
+            System.out.println("The CDLL does not exists !! ");
+            return;
+        }
+
+        // deleting a node from the begining of the linked list
+        else if(location == 0) {
+            // case 1: if there is only one node present in the linked list
+            if(size == 1) {
+                head.previous = null;
+                head.next = null;
+                head = tail = null;
+                size--;
+                return;
+            }
+
+            // case 2 : more than one element in the CDLL
+            else {
+                head = head.next;
+                head.previous = tail;
+                tail.next = head;
+                size--;
+            }
+        }
+
+        // deleting from the end of CDLL
+        else if(location >= size) {
+
+            // case 1: if 1 node is present in the linked list
+            if (size == 1) {
+                head.previous = null;
+                head.next = null;
+                head = tail = null;
+                size--;
+            }
+
+            // case 2 : more than 1 node is present in the CDLL
+            else {
+                tail = tail.previous;
+                tail.next = head;
+                head.previous = tail;
+                size--;
+            }
+        }
+
+        // deleting any given node from CDLL
+        else {
+            DoublyNode tempNode = head;
+            for(int i=0; i<location-1; i++) {
+                tempNode = tempNode.next;
+            }
+            tempNode.next = tempNode.next.next;
+            tempNode.next.previous = tempNode;
+            size--;
+        }
+    }
+
+    // Delete Entire CDLL
+    public void deleteCDLL() {
+        DoublyNode tempNode = head;
+        for(int i=0; i<size; i++) {
+            tempNode.previous = null;
+            tempNode = tempNode.next;
+        }
+        head = null;
+        tail = null;
+        System.out.println("The CDLL has been deleted !! ");
+    }
 }

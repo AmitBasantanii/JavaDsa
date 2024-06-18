@@ -13,8 +13,10 @@
       <module fileurl="file://$PROJECT_DIR$/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/Recursion/Recursion.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stack/Stack_Using_Linked_List/Stack_Using_Linked_List.iml" filepath="$PROJECT_DIR$/Stack/Stack_Using_Linked_List/Stack_Using_Linked_List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stack_and_Queue_Questions/Stack_and_Queue_Questions.iml" filepath="$PROJECT_DIR$/Stack_and_Queue_Questions/Stack_and_Queue_Questions.iml" />
       <module fileurl="file://$PROJECT_DIR$/Streams/Streams.iml" filepath="$PROJECT_DIR$/Streams/Streams.iml" />
       <module fileurl="file://$PROJECT_DIR$/Supplier/Supplier.iml" filepath="$PROJECT_DIR$/Supplier/Supplier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tree/Tree.iml" filepath="$PROJECT_DIR$/Tree/Tree.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java_dsa.iml" filepath="$PROJECT_DIR$/.idea/java_dsa.iml" />
     </modules>
   </component>

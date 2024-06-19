@@ -51,4 +51,57 @@ public class BinaryTree {
         System.out.print(arr[index] + " ");
         inOrder(index * 2 + 1);
     }
+
+    // Post Order
+    public void postOrder(int index) {
+        if(index>lastUsedIndex) {
+            return;
+        }
+        postOrder(2*index); // left subtree
+        postOrder(2*index+1); // right subtree
+        System.out.print(arr[index] + " "); // root subtree
+    }
+
+    // LevelOrder Traversal
+    public void levelOrder() {
+        for(int i=1; i<= lastUsedIndex; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    // Search method
+    public int search(String value) {
+        for(int i=1; i<=lastUsedIndex; i++) {
+            if(arr[i] == value) {
+                System.out.println(value + " exists at the location : " + i);
+                return i;
+            }
+        }
+        System.out.println("The value does not exists in the Binary Tree");
+        return -1;
+    }
+
+    // Delete Method
+    public void delete(String value) {
+        int location = search(value);
+        if(location == -1) {
+            return;
+        }
+        else {
+            arr[location] = arr[lastUsedIndex];
+            lastUsedIndex--;
+            System.out.println(" The node successfully deleted !! ");
+        }
+    }
+
+    // Delete BT
+    public void deleteBT() {
+        try {
+            arr = null;
+            System.out.println("The BT has been sucessfully deleted !!");
+        }
+        catch(Exception exception) {
+            System.out.println("There was an error deleting the tree !!");
+        }
+    }
 }

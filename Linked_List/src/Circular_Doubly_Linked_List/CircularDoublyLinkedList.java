@@ -28,7 +28,7 @@ public class CircularDoublyLinkedList {
             createCDLL(nodeValue);
             return;
         }
-        // insertion of the new node at the begining
+        // insertion of the new node at the beginning
         else if (location == 0) {
             newNode.next = head;
             newNode.previous = tail; // to make it circular

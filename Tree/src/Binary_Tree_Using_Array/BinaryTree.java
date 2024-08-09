@@ -37,9 +37,9 @@ public class BinaryTree {
         if(index > lastUsedIndex) {
             return;
         }
-        System.out.print(arr[index] + " ");
-        preOrder(index * 2);
-        preOrder(index * 2 + 1);
+        System.out.print(arr[index] + " "); // root
+        preOrder(index * 2); // left
+        preOrder(index * 2 + 1); // right
     }
 
     // InOrder Traversal
@@ -47,9 +47,9 @@ public class BinaryTree {
         if(index > lastUsedIndex) {
             return;
         }
-        inOrder(index * 2);
-        System.out.print(arr[index] + " ");
-        inOrder(index * 2 + 1);
+        inOrder(index * 2); // left
+        System.out.print(arr[index] + " "); // root
+        inOrder(index * 2 + 1); // right
     }
 
     // Post Order

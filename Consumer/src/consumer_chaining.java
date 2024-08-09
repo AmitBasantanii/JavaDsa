@@ -14,11 +14,11 @@ public class consumer_chaining {
 
         Consumer<movie_chaining> consumer2 = movie -> System.out.println("Movie : "+ movie.name + " is just released and it is : "  + movie.result);
 
-        Consumer<movie_chaining> consumer3 = movie -> System.out.println("Movie: " + movie.name + " information stoting in database");
+        Consumer<movie_chaining> consumer3 = movie -> System.out.println("Movie: " + movie.name + " information storing in database");
 
         Consumer<movie_chaining> chainedC = consumer1.andThen(consumer2).andThen(consumer3);
 
-        movie_chaining m1 = new movie_chaining("Bahibali", "Hit");
+        movie_chaining m1 = new movie_chaining("Bahubali", "Hit");
         chainedC.accept(m1);
 
         movie_chaining m2 = new movie_chaining("Spider man", "Flop");

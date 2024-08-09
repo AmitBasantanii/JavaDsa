@@ -15,9 +15,9 @@ public class BinaryTreeLL {
         if(binaryNode == null) {
             return;
         }
-        System.out.print(binaryNode.value + " ");
-        preOrder(binaryNode.left);
-        preOrder(binaryNode.right);
+        System.out.print(binaryNode.value + " "); // root
+        preOrder(binaryNode.left); // left
+        preOrder(binaryNode.right); // right
     }
 
     // InOrder Traversal
@@ -25,9 +25,9 @@ public class BinaryTreeLL {
         if(binaryNode == null) {
             return;
         }
-        inOrder(binaryNode.left);
+        inOrder(binaryNode.left); // left
         System.out.print(binaryNode.value + " "); // root node
-        inOrder(binaryNode.right);
+        inOrder(binaryNode.right); // right
     }
 
     // Post Order Traversal
@@ -35,9 +35,9 @@ public class BinaryTreeLL {
         if(node == null) {
             return;
         }
-        postOrder(node.left);
-        postOrder(node.right);
-        System.out.print(node.value + " ");
+        postOrder(node.left); // left
+        postOrder(node.right); // right
+        System.out.print(node.value + " "); // root
     }
 
     // Level Order

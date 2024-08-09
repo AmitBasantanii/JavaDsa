@@ -26,16 +26,16 @@ public class CircularSinglyLinkedList {
             return;
         }
         // insertion at the begining of the linked list
-        if (location ==0 ) {
+        if (location == 0 ) {
             node.next = head;
             head = node;
-            tail.next= head;
+            tail.next= head; // to make it circularly
         }
         // insertion at the end of the linked list
         else if(location >= size) {
             tail.next = node;
             tail = node;
-            tail.next =head;
+            tail.next =head; // to make it circularly
         }
         // insertion at the specified location
         else {
